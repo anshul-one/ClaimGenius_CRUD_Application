@@ -87,24 +87,24 @@ export default {
 </script>
 <style>
 .container {
-  background-color: #e3f2fd; /* Light gray */
+  background-color: #e3f2fd;
   border-radius: 5%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   /* height: 0px; */
 }
 .container form {
-  border-radius: 16px; /* Adjust this value as you like */
-  background: #fff; /* Optional: white background for contrast */
+  border-radius: 16px;
+  background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
-  padding: 1.5rem; /* Optional: add some padding */
+  padding: 1.5rem;
 }
 .container table {
-  border-radius: 20px; /* Adjust this value as you like */
-  background: #fff; /* Optional: white background for contrast */
+  border-radius: 20px;
+  background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
-  padding: 1.5rem; /* Optional: add some padding */
+  padding: 1.5rem;
 }
 body {
-  background-color: #e3f2fd; /* Optional: page background */
+  background-color: #e3f2fd;
 }
 </style>

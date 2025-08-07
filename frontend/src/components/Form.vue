@@ -1,4 +1,3 @@
-<!-- src/components/Form.vue -->
 <template>
   <form @submit.prevent="onSubmit" class="card p-4 mb-4 shadow-sm">
     <div class="row g-3">
@@ -10,7 +9,7 @@
           required
         />
       </div>
-      <!-- Experimented input - can be used later -->
+
       <!--
       <div class="col-xl-4">
         <input v-model="form.last_name" class="form-flow" placeholder="Last Name" required />
