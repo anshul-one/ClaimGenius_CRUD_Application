@@ -33,7 +33,7 @@ const router = useRouter();
 
 const fetchUsers = async () => {
   const res = await axios.get("http://localhost:5000/api/users");
-  users.value = res.data;
+  users.value = res.data.data;
 };
 
 const editUser = (user) => {

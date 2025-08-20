@@ -102,7 +102,7 @@ const validateUser = (user) => {
 const fetchUserById = async (id) => {
   const res = await axios.get(`http://localhost:5000/api/users/${id}`);
 
-  return res.data;
+  return res.data.data;
 };
 
 onMounted(async () => {
@@ -134,12 +134,3 @@ function goBack() {
   router.push("/");
 }
 </script>
-
-<!-- <style>
-.entDet {
-  height: 50px;
-  font-size: 2rem;
-  font-weight: bold;
-  /* padding-bottom: 400px; */
-}
-</style> -->
