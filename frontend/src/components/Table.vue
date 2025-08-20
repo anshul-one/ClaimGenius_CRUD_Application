@@ -16,7 +16,6 @@
           <tr v-for="user in users" :key="user.id">
             <td>{{ user.first_name }}</td>
             <td>{{ user.last_name }}</td>
-            <!-- <td>{{ user.dob }}</td> -->
             <td>{{ formatDate(user.dob) }}</td>
             <td>{{ user.mobile }}</td>
             <td>{{ user.address }}</td>
@@ -36,7 +35,7 @@
                 Delete
               </button>
               <!--
-              <button class="btn btn-outline-info btn-sm ms-1">   check it  after creating button....
+              <button class="btn btn-outline-info btn-sm ms-1">
                 View
               </button>
               -->
@@ -48,17 +47,16 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "UserTable",
-  props: ["users"],
-  emits: ["edit", "delete"],
-  methods: {
-    formatDate(dateString) {
-      const date = new Date(dateString);
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      return date.toLocaleDateString("en-US", options);
-    },
-  },
-};
+<script setup>
+// import { defineProps, defineEmits } from "vue";
+
+const props = defineProps(["users"]);
+defineEmits(["edit", "delete"]);
+
+function formatDate(dateString) {
+  if (!dateString) return "";
+  const date = new Date(dateString);
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return date.toLocaleDateString("en-US", options);
+}
 </script>
