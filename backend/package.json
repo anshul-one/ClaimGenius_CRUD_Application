@@ -1,12 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "this is a CRUD application",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node --env-file=.env src/app.js",
+    "dev": "nodemon --env-file=.env src/app.js"
   },
   "author": "Anshul Umredkar",
   "license": "ISC",
@@ -20,6 +21,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "moment-timezone": "^0.6.0",
     "pg": "^8.16.3"
   }
 }
